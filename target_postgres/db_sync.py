@@ -161,7 +161,7 @@ class DbSync:
         if is_temporary:
             return '{}_temp'.format(table_name)
         else:
-            return '{}.{}'.format(self.schema_name, table_name)
+            return '"{}".{}'.format(self.schema_name, table_name)
 
     def reject_file(self, file):
         self.rejected_count += 1
