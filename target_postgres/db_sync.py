@@ -308,7 +308,7 @@ class DbSync:
         )
 
         if len(schema_rows) == 0:
-            self.query("CREATE SCHEMA IF NOT EXISTS {}".format(schema_name))
+            self.query('CREATE SCHEMA IF NOT EXISTS "{}"'.format(schema_name))
 
     def get_tables(self):
         return self.query(
